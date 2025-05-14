@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemma 2B Neural Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gemma 2B Neural Interface</h1>
+            <div id="status" class="status connected">Neural Network Connected</div>
+        </header>
+        
+        <main>
+            <div id="chat-container" class="chat-container">
+                <div class="message ai">
+                    <div class="message-content">
+                        <p>Hello! I'm Gemma 2B, a neural assistant with web search capabilities. How can I assist you today?</p>
+                    </div>
+                    <div class="message-time">Now</div>
+                </div>
+            </div>
+            
+            <div id="search-indicator" class="search-indicator hidden">
+                <div class="search-spinner"></div>
+                <span>Searching neural pathways...</span>
+            </div>
+            
+            <div class="input-area">
+                <textarea id="user-input" placeholder="Ask me anything..." rows="1"></textarea>
+                <button id="send-button" class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </main>
+        
+        <aside id="settings-panel" class="settings-panel">
+            <h2>Neural Configuration</h2>
+            
+            <div class="settings-section">
+                <h3>Model Parameters</h3>
+                
+                <div class="slider-container">
+                    <label for="temperature">Creative Freedom</label>
+                    <div class="slider-wrapper">
+                        <input type="range" id="temperature" min="0" max="2" step="0.1" value="0.3">
+                        <span id="temperature-value">0.3</span>
+                    </div>
+                </div>
+                
+                <div class="slider-container">
+                    <label for="top-p">Diversity</label>
+                    <div class="slider-wrapper">
+                        <input type="range" id="top-p" min="0" max="1" step="0.1" value="0.9">
+                        <span id="top-p-value">0.9</span>
+                    </div>
+                </div>
+                
+                <div class="slider-container">
+                    <label for="max-tokens">Response Length</label>
+                    <div class="slider-wrapper">
+                        <input type="range" id="max-tokens" min="100" max="4000" step="50" value="1000">
+                        <span id="max-tokens-value">1000</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Search Configuration</h3>
+                
+                <div class="toggle-container">
+                    <label for="web-search">Web Search</label>
+                    <label class="toggle">
+                        <input type="checkbox" id="web-search" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                
+                <div class="toggle-container">
+                    <label for="deep-search">Deep Search</label>
+                    <label class="toggle">
+                        <input type="checkbox" id="deep-search" checked>
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Response Style</h3>
+                
+                <div class="select-container">
+                    <label for="prompt-template">Neural Mode</label>
+                    <select id="prompt-template">
+                        <option value="standard">Standard Assistant</option>
+                        <option value="expert">Expert Analysis</option>
+                        <option value="creative">Creative Synthesis</option>
+                        <option value="researcher">Deep Research</option>
+                        <option value="educational" selected>Educational Format</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="settings-section">
+                <h3>Interface Controls</h3>
+                
+                <div class="button-container">
+                    <button id="clear-chat" class="action-button">
+                        <i class="fas fa-trash"></i> Clear Chat
+                    </button>
+                    <button id="toggle-theme" class="action-button">
+                        <i class="fas fa-moon"></i> Toggle Theme
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
