@@ -30,7 +30,7 @@ Follow these steps to set up the Gemma 2B Neural Interface on your machine:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/gemma2b-neural-interface.git
+git clone https://github.com/talhascientist/Gemma-2B-Neural-Interface.git
 cd gemma2b-neural-interface
 ```
 
