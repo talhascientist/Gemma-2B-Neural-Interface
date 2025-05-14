@@ -2,7 +2,8 @@
 
 A sleek, modern web interface for interacting with the Gemma 2B language model with web search capabilities.
 
-![Gemma 2B Neural Interface](https://i.imgur.com/example.png)
+!Gemma 2B Neural Interface
+https://freeimage.host/i/3U7TK11
 
 ## Features
 
